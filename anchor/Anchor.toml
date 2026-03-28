@@ -1,13 +1,13 @@
 [toolchain]
 package_manager = "yarn"
+anchor_version = "0.31.1"
 
 [features]
 resolution = true
 skip-lint = false
 
 [programs.devnet]
-counter = "Count3AcZucFDPSFBAeHkQ6AvttieKUkyJ8HiQGhQwe"
-farm_tokenization = "Ard8wQpNdajcUvc9amhbxqdPHt6rDotjDWyt4NTTCkmT"
+farm_tokenization = "2dLysFbhrftGHHpGdsLeDHeCQoqXUAEtQk2qtRt7amCc"
 
 [registry]
 url = "https://api.apr.dev"

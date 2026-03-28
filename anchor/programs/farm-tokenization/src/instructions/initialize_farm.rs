@@ -6,13 +6,14 @@ use anchor_spl::{
 
 pub use crate::states::Farm;
 #[derive(Accounts)]
+#[instruction(name: String)]
 pub struct InitializeFarm<'info> {
     #[account(mut)]
     pub owner: Signer<'info>,
 
     #[account(
         init_if_needed,
-        seeds = [b"farm", owner.key().as_ref()],
+        seeds = [b"farm", owner.key().as_ref(), name.as_bytes()],
         bump,
         payer = owner,
         space = 8 + Farm::INIT_SPACE,
